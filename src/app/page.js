@@ -13,7 +13,7 @@ const products = [
     img: "/images/schraubenbolzen-01.jpg",
   },
   {
-    title: "Kaltfliesspressteile",
+    title: "Kaltfließpressteile",
     desc: "Von einfachen bis zu komplexen Mehrstufen-Pressteilen",
     img: "/images/kaltfliesspressteile-sonstige-01.jpg",
   },
@@ -77,13 +77,15 @@ const subsidiaries = [
     name: "RFI Randack Fasteners India",
     desc: "Spezialisierung auf Verbindungselemente für Windkraftanwendungen",
     location: "Pune, Indien",
-    logo: "/images/bildstreifen-randack-fasteners-india-01.jpg",
+    logo: null,
+    abbr: "RFI",
   },
   {
     name: "RFA Randack Fasteners Americas",
     desc: "Tower bolts, blade connectors und specialty fasteners für die Americas Region",
     location: "Humble, Texas, USA",
-    logo: "/images/bildstreifen-randack-fasteners-americas-01.jpg",
+    logo: null,
+    abbr: "RFA",
   },
 ];
 
@@ -292,7 +294,7 @@ export default function Home() {
       {/* Industries + Quality */}
       <section className="section section-dark" id="branchen">
         <div className="container">
-          <div style={{ display: "grid", gridTemplateColumns: "1fr 1fr", gap: "4rem", alignItems: "start" }}>
+          <div className="industries-quality-grid">
             <div>
               <span className="section-label">Branchen</span>
               <h2 className="section-title">
@@ -315,7 +317,7 @@ export default function Home() {
               <h2 className="section-title" style={{ fontSize: "clamp(1.5rem, 2.5vw, 2rem)" }}>
                 Zertifizierungen & Normen
               </h2>
-              <div className="certs-grid" style={{ gridTemplateColumns: "repeat(2, 1fr)" }}>
+              <div className="certs-grid">
                 {certifications.map((c) => (
                   <div key={c.name} className="cert-card">
                     <h4>{c.name}</h4>
@@ -348,17 +350,29 @@ export default function Home() {
             {subsidiaries.map((s) => (
               <div key={s.name} className="group-card">
                 <div className="group-card-logo">
-                  <Image
-                    src={s.logo}
-                    alt={s.name}
-                    width={150}
-                    height={50}
-                    style={{
-                      maxHeight: 50,
-                      width: "auto",
-                      objectFit: "contain",
-                    }}
-                  />
+                  {s.logo ? (
+                    <Image
+                      src={s.logo}
+                      alt={s.name}
+                      width={150}
+                      height={50}
+                      style={{
+                        maxHeight: 50,
+                        width: "auto",
+                        objectFit: "contain",
+                      }}
+                    />
+                  ) : (
+                    <span style={{
+                      fontSize: "1.4rem",
+                      fontWeight: 700,
+                      color: "var(--rs-blue)",
+                      fontFamily: "var(--font-heading), var(--font-sans), sans-serif",
+                      letterSpacing: "0.05em",
+                    }}>
+                      {s.abbr}
+                    </span>
+                  )}
                 </div>
                 <h3>{s.name}</h3>
                 <p>{s.desc}</p>
@@ -379,7 +393,7 @@ export default function Home() {
             Sie erhalten innerhalb eines Tages unsere Antwort — ob nach Normen
             oder nach Ihren Zeichnungen.
           </p>
-          <Link href="/kontakt" className="btn-primary" style={{ background: "#fff", color: "var(--rs-blue)" }}>
+          <Link href="/kontakt" className="btn-primary-white">
             Jetzt Anfrage stellen
           </Link>
         </div>

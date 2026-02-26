@@ -139,7 +139,7 @@ export default function HerstellungPage() {
             Fertigungsfolge und Prüfpläne werden häufig gemeinsam mit dem Kunden
             erarbeitet.
           </p>
-          <Link href="/kontakt" className="btn-primary" style={{ background: "#fff", color: "var(--rs-blue)" }}>
+          <Link href="/kontakt" className="btn-primary-white">
             Jetzt Anfrage stellen
           </Link>
         </div>

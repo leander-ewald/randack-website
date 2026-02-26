@@ -56,7 +56,7 @@ export default function Footer() {
             </li>
             <li>
               <Link href="/lieferprogramm#kaltfliesspressteile">
-                Kaltfliesspressteile
+                Kaltfließpressteile
               </Link>
             </li>
             <li>

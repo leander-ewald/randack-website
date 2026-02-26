@@ -94,7 +94,7 @@ export default function QualitaetPage() {
           <span className="section-label">Labor & Prüfung</span>
           <h2 className="section-title">Einblicke in unsere Qualitätssicherung</h2>
           <div className="products-grid" style={{ marginTop: "2rem" }}>
-            {[1, 2, 3, 5, 6, 7].map((n) => (
+            {[1, 2, 3, 5, 6, 7, 8, 9].map((n) => (
               <div key={n} className="product-card">
                 <Image
                   src={`/images/qualitaet-0${n}.jpg`}
@@ -122,10 +122,7 @@ export default function QualitaetPage() {
               anspruchsvollsten Branchen ab.
             </p>
           </div>
-          <div
-            className="certs-grid"
-            style={{ gridTemplateColumns: "repeat(5, 1fr)", marginTop: "3rem" }}
-          >
+          <div className="certs-grid-5">
             {certifications.map((c) => (
               <div key={c.name} className="cert-card">
                 <h4>{c.name}</h4>
@@ -153,7 +150,7 @@ export default function QualitaetPage() {
             Kontaktieren Sie uns für Ihre qualitätskritischen
             Verbindungselemente.
           </p>
-          <Link href="/kontakt" className="btn-primary" style={{ background: "#fff", color: "var(--rs-blue)" }}>
+          <Link href="/kontakt" className="btn-primary-white">
             Anfrage stellen
           </Link>
         </div>

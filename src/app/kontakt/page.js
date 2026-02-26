@@ -1,5 +1,5 @@
 import Image from "next/image";
-import Link from "next/link";
+import ContactForm from "./ContactForm";
 
 export const metadata = {
   title: "Kontakt | Randack Spezialschrauben",
@@ -127,70 +127,20 @@ export default function KontaktPage() {
             </div>
 
             {/* Form */}
-            <div className="contact-form">
-              <h3>Kontaktformular</h3>
-              <form>
-                <div className="form-row">
-                  <div className="form-group">
-                    <label>Firma</label>
-                    <input type="text" name="company" />
-                  </div>
-                  <div className="form-group">
-                    <label>Anrede</label>
-                    <select name="salutation">
-                      <option value="">Bitte wählen</option>
-                      <option>Herr</option>
-                      <option>Frau</option>
-                    </select>
-                  </div>
-                </div>
-                <div className="form-row">
-                  <div className="form-group">
-                    <label>Vorname</label>
-                    <input type="text" name="firstName" />
-                  </div>
-                  <div className="form-group">
-                    <label>Nachname *</label>
-                    <input type="text" name="lastName" required />
-                  </div>
-                </div>
-                <div className="form-row">
-                  <div className="form-group">
-                    <label>Telefon</label>
-                    <input type="tel" name="phone" />
-                  </div>
-                  <div className="form-group">
-                    <label>E-Mail *</label>
-                    <input type="email" name="email" required />
-                  </div>
-                </div>
-                <div className="form-group">
-                  <label>Nachricht *</label>
-                  <textarea name="message" rows={5} required />
-                </div>
-                <button type="submit" className="btn-primary" style={{ width: "100%" }}>
-                  Nachricht senden
-                </button>
-              </form>
-            </div>
+            <ContactForm />
           </div>
         </div>
       </section>
 
-      {/* Map placeholder */}
-      <div
-        style={{
-          height: 300,
-          background: "#e5e5e5",
-          display: "flex",
-          alignItems: "center",
-          justifyContent: "center",
-          color: "#999",
-          fontSize: "1rem",
-        }}
-      >
-        Google Maps — Delsterner Straße 148 E, 58091 Hagen
-      </div>
+      {/* Google Maps */}
+      <iframe
+        className="map-embed"
+        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2488.5!2d7.4891!3d51.3447!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x47b936e5c8d5f6ed%3A0x4b0!2sDelsterner+Str.+148E%2C+58091+Hagen!5e0!3m2!1sde!2sde!4v1700000000000!5m2!1sde!2sde"
+        allowFullScreen=""
+        loading="lazy"
+        referrerPolicy="no-referrer-when-downgrade"
+        title="Standort RS Randack Spezialschrauben GmbH"
+      />
     </>
   );
 }

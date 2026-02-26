@@ -32,7 +32,7 @@ const categories = [
   },
   {
     id: "kaltfliesspressteile",
-    title: "Kaltfliesspressteile",
+    title: "Kaltfließpressteile",
     desc: "Nietbolzen, Einpressteile, Muttern, Buchsen und Bolzen in Mehrstufentechnik und Doppeldruck-Verfahren.",
     images: [
       "kaltfliesspressteile-sonstige-01.jpg",
@@ -191,7 +191,7 @@ export default function LieferprogrammPage() {
             Fragen Sie Ihren Bedarf an — Sie erhalten innerhalb eines Tages
             unsere Antwort.
           </p>
-          <Link href="/kontakt" className="btn-primary" style={{ background: "#fff", color: "var(--rs-blue)" }}>
+          <Link href="/kontakt" className="btn-primary-white">
             Jetzt anfragen
           </Link>
         </div>

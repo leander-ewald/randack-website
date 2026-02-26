@@ -142,32 +142,15 @@ export default function UnternehmenPage() {
           <h2 className="section-title">
             Vertretungsberechtigte Geschäftsführer
           </h2>
-          <div
-            style={{
-              display: "flex",
-              justifyContent: "center",
-              gap: "3rem",
-              marginTop: "2rem",
-              flexWrap: "wrap",
-            }}
-          >
+          <div className="management-grid">
             {[
               "Dipl.-Ing. Andreas Kuhn",
               "Oliver Skrzypczak",
               "Martin Marscheider",
             ].map((name) => (
-              <div
-                key={name}
-                style={{
-                  padding: "1.5rem 2.5rem",
-                  border: "1px solid rgba(255,255,255,0.15)",
-                  borderRadius: 8,
-                }}
-              >
-                <div style={{ fontSize: "1.1rem", fontWeight: 700 }}>{name}</div>
-                <div style={{ fontSize: "0.85rem", color: "rgba(255,255,255,0.6)", marginTop: "0.3rem" }}>
-                  Geschäftsführer
-                </div>
+              <div key={name} className="management-card">
+                <div className="management-card-name">{name}</div>
+                <div className="management-card-role">Geschäftsführer</div>
               </div>
             ))}
           </div>
@@ -179,7 +162,7 @@ export default function UnternehmenPage() {
         <div className="container">
           <h2>Werden Sie Teil der Randack Group</h2>
           <p>Kontaktieren Sie uns — wir freuen uns auf die Zusammenarbeit.</p>
-          <Link href="/kontakt" className="btn-primary" style={{ background: "#fff", color: "var(--rs-blue)" }}>
+          <Link href="/kontakt" className="btn-primary-white">
             Kontakt aufnehmen
           </Link>
         </div>
