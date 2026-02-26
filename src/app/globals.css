@@ -146,6 +146,12 @@ body {
   }
 }
 
+@media (max-width: 768px) {
+  .nav-links {
+    top: 64px;
+  }
+}
+
 /* Hero */
 .hero {
   position: relative;
@@ -1060,4 +1066,420 @@ body {
   font-size: 0.85rem;
   color: rgba(255, 255, 255, 0.6);
   margin-top: 0.3rem;
+}
+
+/* Nav spacer for pages without hero */
+.nav-spacer {
+  height: 80px;
+}
+
+/* ========================================
+   MOBILE OPTIMIERUNG (320px — 768px)
+   ======================================== */
+
+/* --- Nav Spacer Mobile --- */
+@media (max-width: 768px) {
+  .nav-spacer {
+    height: 64px;
+  }
+}
+
+/* --- Navigation Mobile --- */
+@media (max-width: 768px) {
+  .nav-inner {
+    height: 64px;
+    padding: 0 1rem;
+  }
+
+  .nav-logo img {
+    height: 36px;
+  }
+
+  .nav-toggle {
+    min-width: 44px;
+    min-height: 44px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .nav-links {
+    top: 64px;
+    padding: 1rem;
+    max-height: calc(100vh - 64px);
+    overflow-y: auto;
+  }
+
+  .nav-links a {
+    padding: 0.9rem 0;
+    font-size: 1rem;
+    min-height: 44px;
+    display: flex;
+    align-items: center;
+  }
+
+  .nav-cta {
+    padding: 0.8rem 1.4rem;
+    margin-top: 0.75rem;
+    display: flex;
+    justify-content: center;
+    min-height: 44px;
+  }
+}
+
+/* --- Hero Mobile --- */
+@media (max-width: 768px) {
+  .hero {
+    min-height: 500px;
+  }
+
+  .hero-content {
+    padding: 0 1rem;
+    padding-top: 64px;
+  }
+
+  .hero h1 {
+    font-size: clamp(1.8rem, 7vw, 2.5rem);
+    margin-bottom: 1rem;
+  }
+
+  .hero p {
+    font-size: 1rem;
+    margin-bottom: 1.5rem;
+    line-height: 1.6;
+  }
+
+  .hero-badge {
+    font-size: 0.75rem;
+    padding: 0.35rem 0.8rem;
+    margin-bottom: 1rem;
+  }
+
+  .hero-actions {
+    flex-direction: column;
+    gap: 0.75rem;
+  }
+
+  .hero-actions .btn-primary,
+  .hero-actions .btn-secondary {
+    width: 100%;
+    justify-content: center;
+    padding: 0.85rem 1.5rem;
+    min-height: 48px;
+  }
+
+  .hero-stats {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 1.5rem;
+    margin-top: 2rem;
+    padding-top: 1.5rem;
+  }
+
+  .hero-stat-number {
+    font-size: 1.8rem;
+  }
+
+  .hero-stat-label {
+    font-size: 0.75rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .hero {
+    min-height: 450px;
+  }
+
+  .hero h1 {
+    font-size: 1.6rem;
+  }
+}
+
+/* --- Sections Mobile --- */
+@media (max-width: 768px) {
+  .section {
+    padding: 3.5rem 1rem;
+  }
+
+  .section-title {
+    font-size: clamp(1.5rem, 6vw, 2rem);
+  }
+
+  .section-subtitle {
+    font-size: 1rem;
+  }
+
+  .section-label {
+    font-size: 0.75rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .section {
+    padding: 2.5rem 0.75rem;
+  }
+}
+
+/* --- About Grid Mobile --- */
+@media (max-width: 768px) {
+  .about-grid {
+    grid-template-columns: 1fr;
+    gap: 1.5rem;
+    margin-top: 2rem;
+    direction: ltr !important;
+  }
+
+  .about-text h3 {
+    font-size: 1.3rem;
+  }
+
+  .about-image {
+    aspect-ratio: 16/10;
+  }
+}
+
+/* --- Feature Cards Mobile --- */
+@media (max-width: 768px) {
+  .features-grid {
+    gap: 1rem;
+    margin-top: 2rem;
+  }
+
+  .feature-card {
+    padding: 1.5rem 1.25rem;
+  }
+
+  .feature-card:hover {
+    transform: none;
+  }
+}
+
+/* --- Product Cards Mobile --- */
+@media (max-width: 768px) {
+  .products-grid {
+    grid-template-columns: repeat(2, 1fr) !important;
+    gap: 0.75rem;
+    margin-top: 2rem;
+  }
+
+  .product-card {
+    aspect-ratio: 1;
+  }
+
+  .product-card h3 {
+    font-size: 0.9rem;
+  }
+
+  .product-card p {
+    font-size: 0.75rem;
+    display: none;
+  }
+
+  .product-card-overlay {
+    padding: 1rem;
+  }
+
+  .product-card:hover img {
+    transform: none;
+  }
+}
+
+@media (max-width: 480px) {
+  .products-grid {
+    grid-template-columns: 1fr !important;
+  }
+
+  .product-card {
+    aspect-ratio: 4/3;
+  }
+
+  .product-card p {
+    display: block;
+  }
+}
+
+/* --- Cert Cards Mobile --- */
+@media (max-width: 768px) {
+  .cert-card {
+    padding: 1rem;
+  }
+
+  .cert-card h4 {
+    font-size: 0.8rem;
+  }
+
+  .cert-card p {
+    font-size: 0.75rem;
+  }
+}
+
+/* --- Group Grid Mobile --- */
+@media (max-width: 640px) {
+  .group-card {
+    padding: 1.5rem;
+  }
+
+  .group-card h3 {
+    font-size: 0.9rem;
+  }
+}
+
+/* --- Industries Mobile --- */
+@media (max-width: 768px) {
+  .industries-list {
+    gap: 0.5rem;
+  }
+
+  .industry-tag {
+    padding: 0.4rem 0.9rem;
+    font-size: 0.8rem;
+  }
+}
+
+/* --- CTA Banner Mobile --- */
+@media (max-width: 768px) {
+  .cta-banner {
+    padding: 3rem 1rem;
+  }
+
+  .cta-banner h2 {
+    font-size: clamp(1.4rem, 5vw, 1.8rem);
+  }
+
+  .cta-banner p {
+    font-size: 1rem;
+    margin-bottom: 1.5rem;
+  }
+
+  .btn-primary-white {
+    width: 100%;
+    justify-content: center;
+    min-height: 48px;
+  }
+}
+
+/* --- Contact Mobile --- */
+@media (max-width: 768px) {
+  .contact-form {
+    padding: 1.5rem;
+    border-radius: 8px;
+  }
+
+  .contact-info-icon {
+    width: 40px;
+    height: 40px;
+  }
+}
+
+/* --- Map Mobile --- */
+@media (max-width: 768px) {
+  .map-embed {
+    height: 280px;
+  }
+}
+
+/* --- Image Strip Mobile --- */
+@media (max-width: 768px) {
+  .image-strip {
+    height: 120px;
+  }
+
+  .image-strip img:nth-child(n+3) {
+    display: none;
+  }
+}
+
+@media (max-width: 480px) {
+  .image-strip {
+    height: 100px;
+  }
+}
+
+/* --- News Cards Mobile --- */
+@media (max-width: 768px) {
+  .news-grid {
+    gap: 1.25rem;
+    margin-top: 2rem;
+  }
+
+  .news-card-body {
+    padding: 1rem;
+  }
+
+  .news-card:hover {
+    transform: none;
+  }
+}
+
+/* --- Specs Mobile --- */
+@media (max-width: 768px) {
+  .spec-item {
+    padding: 1rem;
+  }
+}
+
+/* --- Management Mobile --- */
+@media (max-width: 768px) {
+  .management-grid {
+    gap: 1rem;
+  }
+
+  .management-card {
+    padding: 1rem 1.5rem;
+    flex: 1 1 auto;
+    min-width: 200px;
+  }
+
+  .management-card-name {
+    font-size: 0.95rem;
+  }
+}
+
+/* --- Buttons Mobile — Touch Targets --- */
+@media (max-width: 768px) {
+  .btn-primary,
+  .btn-secondary {
+    min-height: 48px;
+    padding: 0.85rem 1.5rem;
+    font-size: 0.9rem;
+  }
+
+  a, button {
+    -webkit-tap-highlight-color: transparent;
+  }
+}
+
+/* --- Footer Mobile --- */
+@media (max-width: 768px) {
+  .footer {
+    padding: 3rem 1rem 1.5rem;
+  }
+
+  .footer h4 {
+    margin-bottom: 1rem;
+    font-size: 0.85rem;
+  }
+
+  .footer-brand p {
+    font-size: 0.85rem;
+  }
+}
+
+/* --- Legal Pages (Impressum, Datenschutz) Mobile --- */
+@media (max-width: 768px) {
+  .section h1.section-title {
+    font-size: 1.5rem;
+  }
+}
+
+/* --- Prevent horizontal overflow --- */
+img, video, iframe {
+  max-width: 100%;
+}
+
+/* --- Scrollbar optimization for mobile --- */
+@media (max-width: 768px) {
+  html {
+    -webkit-text-size-adjust: 100%;
+  }
 }

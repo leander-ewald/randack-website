@@ -5,7 +5,7 @@ export const metadata = {
 export default function ImpressumPage() {
   return (
     <>
-      <div style={{ height: 80 }} />
+      <div className="nav-spacer" />
       <section className="section">
         <div className="container" style={{ maxWidth: 800 }}>
           <h1 className="section-title">Impressum</h1>
