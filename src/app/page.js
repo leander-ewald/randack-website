@@ -159,7 +159,7 @@ export default function Home() {
                   width="28"
                   height="28"
                   fill="none"
-                  stroke="#003366"
+                  stroke="#0C1F3F"
                   strokeWidth="2"
                   viewBox="0 0 24 24"
                 >
@@ -178,7 +178,7 @@ export default function Home() {
                   width="28"
                   height="28"
                   fill="none"
-                  stroke="#003366"
+                  stroke="#0C1F3F"
                   strokeWidth="2"
                   viewBox="0 0 24 24"
                 >
@@ -198,7 +198,7 @@ export default function Home() {
                   width="28"
                   height="28"
                   fill="none"
-                  stroke="#003366"
+                  stroke="#0C1F3F"
                   strokeWidth="2"
                   viewBox="0 0 24 24"
                 >
